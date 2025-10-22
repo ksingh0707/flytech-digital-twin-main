@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Flyteca Dark Theme */
+    --background: 222 23% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 23% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 23% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 191 91% 49%;
+    --primary-foreground: 222 23% 7%;
+
+    --secondary: 220 23% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 23% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 191 91% 49%;
+    --accent-foreground: 222 23% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 23% 15%;
+    --input: 220 23% 15%;
+    --ring: 191 91% 49%;
+
+    --radius: 0.75rem;
+
+    /* Flyteca Custom Colors */
+    --tech-primary: 191 91% 49%;
+    --tech-secondary: 180 91% 55%;
+    --tech-accent: 171 91% 65%;
+    --tech-dark: 222 23% 7%;
+    --tech-darker: 222 23% 5%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--tech-primary)), hsl(var(--tech-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--tech-dark)), hsl(220 23% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(220 23% 8%), hsl(220 23% 12%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--tech-primary) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(var(--tech-dark) / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same dark theme as root - Flyteca is dark by default */
+    --background: 222 23% 7%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
