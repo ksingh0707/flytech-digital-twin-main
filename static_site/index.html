@@ -1,0 +1,233 @@
+<!doctype html>
+<!--
+  FlyTech — Static Marketing Site
+  Purpose: Static, responsive HTML/CSS-only site for a drone company
+  Sections: Hero, About, Products, Features, Testimonials, Contact, Footer
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlyTech — Elevate Your Vision</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Use a system stack and provide a recommended web font fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">FT</div>
+          <div class="brand-text">
+            <h1 class="sr-only">FlyTech</h1>
+            <span class="company">FlyTech</span>
+            <span class="tag">Next-Gen Drones</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <!-- Large background image is implemented in CSS as a placeholder gradient + image mask -->
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2 class="headline">Elevate Your Vision with Next-Gen Drones.</h2>
+          <p class="subhead">Experience precision, innovation, and power in every flight.</p>
+          <a class="btn primary" href="#about">Learn More</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Prefer user-supplied hero.jpg or hero.png in assets/; fallback to SVG placeholder -->
+          <picture>
+            <!-- Prefer WebP (generated): hero-large.webp -> fallback to hero-large.jpg -> SVG -->
+            <source srcset="assets/hero-large.webp 1600w, assets/hero-medium.webp 960w, assets/hero-small.webp 480w" type="image/webp">
+            <source srcset="assets/hero-large.jpg 1600w, assets/hero-medium.jpg 960w, assets/hero-small.jpg 480w" type="image/jpeg">
+            <img class="drone-art" src="assets/hero-drone.svg" alt="Stylized drone illustration placeholder" loading="lazy" sizes="(min-width:1100px) 560px, 100vw">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="container about-inner">
+        <div class="about-media">
+          <div class="icon-circle">✦</div>
+        </div>
+        <div class="about-copy">
+          <h3>Our Mission</h3>
+          <p>
+            At FlyTech, we design advanced aerial platforms that empower professionals and
+            creators to capture the world in unprecedented detail. Combining robust hardware
+            with intuitive engineering, we push the boundaries of what's possible in unmanned flight.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products">
+      <div class="container">
+        <h3 class="section-title">Our Drones</h3>
+        <div class="product-grid">
+          <!-- Product Card -->
+          <article class="card product-card">
+            <div class="card-media">
+              <picture>
+                <source srcset="assets/product-falconx-large.webp 800w, assets/product-falconx-medium.webp 480w, assets/product-falconx-small.webp 320w" type="image/webp">
+                <source srcset="assets/product-falconx-large.jpg 800w, assets/product-falconx-medium.jpg 480w, assets/product-falconx-small.jpg 320w" type="image/jpeg">
+                <img src="assets/product-falconx.svg" alt="Falcon X thumbnail" loading="lazy" sizes="(min-width:1100px) 1fr, 33vw">
+              </picture>
+            </div>
+            <div class="card-body">
+              <h4>Falcon X</h4>
+              <p>High-speed prosumer drone built for agility and cinematic tracking.</p>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="card-media">
+              <picture>
+                <source srcset="assets/product-aeroscout-large.webp 800w, assets/product-aeroscout-medium.webp 480w, assets/product-aeroscout-small.webp 320w" type="image/webp">
+                <source srcset="assets/product-aeroscout-large.jpg 800w, assets/product-aeroscout-medium.jpg 480w, assets/product-aeroscout-small.jpg 320w" type="image/jpeg">
+                <img src="assets/product-aeroscout.svg" alt="AeroScout thumbnail" loading="lazy" sizes="(min-width:1100px) 1fr, 33vw">
+              </picture>
+            </div>
+            <div class="card-body">
+              <h4>AeroScout</h4>
+              <p>Survey-grade platform with extended battery life for mapping and inspection.</p>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="card-media">
+              <picture>
+                <source srcset="assets/product-vantage-large.webp 800w, assets/product-vantage-medium.webp 480w, assets/product-vantage-small.webp 320w" type="image/webp">
+                <source srcset="assets/product-vantage-large.jpg 800w, assets/product-vantage-medium.jpg 480w, assets/product-vantage-small.jpg 320w" type="image/jpeg">
+                <img src="assets/product-vantage.svg" alt="Vantage Pro thumbnail" loading="lazy" sizes="(min-width:1100px) 1fr, 33vw">
+              </picture>
+            </div>
+            <div class="card-body">
+              <h4>Vantage Pro</h4>
+              <p>Compact design with 4K stabilization for professionals on the move.</p>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="card-media">Image</div>
+            <div class="card-body">
+              <h4>Nimbus Lite</h4>
+              <p>Lightweight, beginner-friendly drone with smart auto-flight modes.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+      <div class="container">
+        <h3 class="section-title">Key Features</h3>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">📷</div>
+            <h4>4K Camera</h4>
+            <p>Capture ultra-clear footage with advanced stabilization.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🛰️</div>
+            <h4>GPS Auto-Flight</h4>
+            <p>Reliable waypoint navigation and return-to-home safety.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🔋</div>
+            <h4>Long Battery Life</h4>
+            <p>Optimized power management for extended missions.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">⚖️</div>
+            <h4>Lightweight Design</h4>
+            <p>Durable materials with an emphasis on portability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+      <div class="container">
+        <h3 class="section-title">What our customers say</h3>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial card">
+            <p>“The Falcon X transformed how we capture events — incredible stability and speed.”</p>
+            <cite>— Jordan P., Cinematographer</cite>
+          </blockquote>
+
+          <blockquote class="testimonial card">
+            <p>“AeroScout made our surveys faster and more accurate. The battery life is a game-changer.”</p>
+            <cite>— Lina M., Survey Engineer</cite>
+          </blockquote>
+
+          <blockquote class="testimonial card">
+            <p>“Vantage Pro is the perfect travel companion for content creators — compact and powerful.”</p>
+            <cite>— Sam K., Travel Vlogger</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <h3>Contact Us</h3>
+          <p>Have questions or want a demo? Send us a message and we'll get back to you.</p>
+        </div>
+        <form class="contact-form" action="#" method="post" onsubmit="return false;">
+          <label class="form-row">
+            <span class="label">Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label class="form-row">
+            <span class="label">Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+
+          <label class="form-row">
+            <span class="label">Message</span>
+            <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year">2025</span> FlyTech. All rights reserved.</div>
+        <div class="footer-right">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

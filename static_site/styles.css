@@ -1,0 +1,131 @@
+/*
+  styles.css — FlyTech static marketing site
+  - Dark gray background, electric blue accents, white text
+  - Uses CSS Grid and Flexbox
+  - Mobile-first responsive design
+*/
+:root{
+  --bg: #0f1720; /* very dark gray */
+  --panel: #0b1220; /* slightly lighter */
+  --muted: #9aa6b2;
+  --accent: #00b4ff; /* electric blue */
+  --accent-2: #60e0ff;
+  --white: #ffffff;
+  --radius: 12px;
+  --container: 1100px;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg, var(--bg), #071019 140%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{
+  width:100%;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:2rem 1rem;
+}
+
+/* Header */
+.site-header{background:transparent; position:sticky; top:0; z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.75rem}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#00121a}
+.company{display:block;font-weight:700}
+.tag{display:block;font-size:.8rem;color:var(--muted);margin-top:-.2rem}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.main-nav a:hover{color:var(--white)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* HERO */
+.hero{padding:4rem 0 6rem;display:flex;align-items:center}
+.hero-inner{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+.hero{background-image:radial-gradient(circle at 10% 20%, rgba(0,180,255,0.06), transparent 8%), linear-gradient(0deg, rgba(0,0,0,0.2), transparent);}
+.hero-copy{max-width:700px}
+.headline{font-size:clamp(1.6rem, 3.6vw, 3rem);margin:0 0 .6rem;letter-spacing:-0.01em}
+.subhead{color:var(--muted);margin:0 0 1.25rem;font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.2rem;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#00222b;box-shadow:0 6px 18px rgba(0,180,255,0.12);}
+.btn.primary:hover{transform:translateY(-2px)}
+.hero-image{display:flex;justify-content:center}
+.drone-placeholder{width:360px;height:220px;background:linear-gradient(135deg,#071922 0%,#043142 50%, rgba(0,180,255,0.06)100%);border-radius:18px;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+/* SVG / image assets */
+.drone-art{width:100%;max-width:560px;border-radius:16px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.card-media img{width:100%;height:160px;object-fit:cover;border-radius:10px;display:block}
+
+/* ABOUT */
+.about{padding:3.5rem 0}
+.about-inner{display:grid;grid-template-columns:64px 1fr;gap:1rem;align-items:center}
+.icon-circle{width:64px;height:64px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--accent)}
+.about-copy h3{margin:0 0 .5rem}
+.about-copy p{margin:0;color:var(--muted)}
+
+/* PRODUCTS */
+.products{padding:2.5rem 0}
+.section-title{font-size:1.1rem;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem}
+.product-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.card{background:var(--panel);border-radius:var(--radius);padding:1rem;border:1px solid rgba(255,255,255,0.03)}
+.product-card{display:flex;flex-direction:column;overflow:hidden}
+.card-media{background:linear-gradient(135deg, rgba(0,180,255,0.06), rgba(96,224,255,0.02));height:160px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+.card-body{padding-top:.9rem}
+.product-card h4{margin:0 0 .5rem}
+.product-card p{margin:0;color:var(--muted)}
+
+/* FEATURES */
+.features{padding:2.5rem 0}
+.features-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.feature{display:flex;gap:1rem;align-items:flex-start;padding:1rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+.feature-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#00121a}
+.feature h4{margin:0 0 .3rem}
+.feature p{margin:0;color:var(--muted)}
+
+/* TESTIMONIALS */
+.testimonials{padding:2.5rem 0}
+.testimonials-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.testimonial{padding:1rem}
+.testimonial p{margin:0 0 .6rem;color:var(--muted)}
+.testimonial cite{font-size:.9rem;color:var(--muted)}
+
+/* CONTACT */
+.contact{padding:2.5rem 0}
+.contact-inner{display:grid;grid-template-columns:1fr;gap:1rem}
+.contact-form{display:grid;gap:.75rem}
+.form-row{display:flex;flex-direction:column}
+.label{display:block;margin-bottom:.35rem;color:var(--muted)}
+input,textarea{background:var(--glass);border:1px solid rgba(255,255,255,0.04);color:var(--white);padding:.75rem;border-radius:10px}
+input:focus,textarea:focus{outline:none;box-shadow:0 6px 18px rgba(0,180,255,0.06);border-color:var(--accent)}
+.form-actions{display:flex;justify-content:flex-end}
+
+/* FOOTER */
+.site-footer{padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.03);background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.footer-right a{color:var(--muted);text-decoration:none;margin-left:1rem}
+
+/* Responsive rules */
+@media(min-width:700px){
+  .hero-inner{grid-template-columns:1fr 480px}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:repeat(3,1fr)}
+  .contact-inner{grid-template-columns:1fr 420px}
+}
+
+@media(min-width:1100px){
+  .product-grid{grid-template-columns:repeat(4,1fr)}
+  .hero{padding:6rem 0 8rem}
+}
+
+/* small interaction polish */
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.45)}
+.card{transition:all 200ms ease}
+.btn{transition:transform 150ms ease, box-shadow 150ms ease}

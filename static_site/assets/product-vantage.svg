@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <rect width="100%" height="100%" rx="12" fill="#05121a"/>
+  <g transform="translate(28,36)">
+    <rect x="0" y="0" width="340" height="140" rx="10" fill="#01232a"/>
+  </g>
+  <text x="22" y="210" fill="#9dbfcc" font-family="Montserrat, Arial" font-size="18">Vantage Pro</text>
+</svg>

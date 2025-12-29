@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple decorative drone SVG placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00b4ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#60e0ff" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#071922" rx="18"/>
+  <g transform="translate(120,120) scale(0.7)">
+    <g fill="none" stroke="url(#g1)" stroke-width="6">
+      <path d="M120 80 C180 40 300 40 360 80" stroke-linecap="round"/>
+      <circle cx="120" cy="80" r="20" fill="#071922" stroke-width="6"/>
+      <circle cx="360" cy="80" r="20" fill="#071922" stroke-width="6"/>
+      <rect x="170" y="90" width="120" height="14" rx="6" fill="#071922"/>
+    </g>
+    <ellipse cx="240" cy="150" rx="220" ry="70" fill="rgba(0,180,255,0.04)"/>
+  </g>
+  <text x="60" y="640" fill="#7fbfdc" font-family="Montserrat, Arial" font-size="28">FlyTech — Next-Gen Drones</text>
+</svg>
